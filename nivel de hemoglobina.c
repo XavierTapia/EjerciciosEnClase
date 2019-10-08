@@ -35,7 +35,7 @@ int main(){
         else if(edad>6&&edad<=12&&hemo>=11&&hemo<=15)
             printf("no tiene anemia");
         else
-            printf("no esta dentro del rango");
+            printf("tiene anemia");
     }else{
         printf("ingrese su edad en anios: ");
         scanf("%d",&edad);
@@ -48,7 +48,7 @@ int main(){
         else if(edad>10&&edad<=15&&hemo>=13&&hemo<=15.5)
             printf("no tiene anemia");
         else
-            printf("no esta dentro del rango");
+            printf("tiene anemia");
     }
     return 0;
 }
