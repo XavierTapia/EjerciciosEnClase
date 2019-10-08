@@ -18,25 +18,37 @@ EDAD        NIVEL HEMOGLOBINA
 #include <stdlib.h>
 
 int main(){
-    int edad;
+    int edad,op;
     float hemo;
-    printf("ingrese su edad: ");
-    scanf("%d",&edad);
-    printf("ingrese su nivel de hemoglobina: ");
-    scanf("%f",&hemo);
-    if(edad>0&&edad<=1&&hemo>=13&&hemo<=26)
-        printf("no tiene anemia");
-    else if(edad>1&&edad<=6&&hemo>=10&&hemo<=18)
-        printf("no tiene anemia");
-    else if(edad>6&&edad<=12&&hemo>=11&&hemo<=15)
-        printf("no tiene anemia");
-    else if(edad>12&&edad<=60&&hemo>=11.5&&hemo<=15)
-        printf("no tiene anemia");
-    else if(edad>60&&edad<=120&&hemo>=12.6&&hemo<=15.5)
-        printf("no tiene anemia");
-    else if(edad>120&&edad<=180&&hemo>=13&&hemo<=15.5)
-        printf("no tiene anemia");
-    else
-        printf("no esta dentro del rango");
+    printf("1. Edad en meses.\n2. Edad en anios.\n\nEscoja la opcion... ");
+    scanf("%d",&op);
+    system("cls");
+    if(op==1){
+        printf("ingrese su edad en meses: ");
+        scanf("%d",&edad);
+        printf("ingrese su nivel de hemoglobina: ");
+        scanf("%f",&hemo);
+        if(edad>0&&edad<=1&&hemo>=13&&hemo<=26)
+            printf("no tiene anemia");
+        else if(edad>1&&edad<=6&&hemo>=10&&hemo<=18)
+            printf("no tiene anemia");
+        else if(edad>6&&edad<=12&&hemo>=11&&hemo<=15)
+            printf("no tiene anemia");
+        else
+            printf("no esta dentro del rango");
+    }else{
+        printf("ingrese su edad en anios: ");
+        scanf("%d",&edad);
+        printf("ingrese su nivel de hemoglobina: ");
+        scanf("%f",&hemo);
+        if(edad>1&&edad<=5&&hemo>=11.5&&hemo<=15)
+            printf("no tiene anemia");
+        else if(edad>5&&edad<=10&&hemo>=12.6&&hemo<=15.5)
+            printf("no tiene anemia");
+        else if(edad>10&&edad<=15&&hemo>=13&&hemo<=15.5)
+            printf("no tiene anemia");
+        else
+            printf("no esta dentro del rango");
+    }
     return 0;
 }
